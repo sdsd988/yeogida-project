@@ -1,0 +1,17 @@
+spring:
+  profiles:
+    active: prod
+    include: db, SECRET
+
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  redis:
+    host: yeogida-redis-subnet-001.jfqkzw.0001.apn2.cache.amazonaws.com
+    port: 6379
+
+logging:
+  level:
+    org.hibernate.type.descriptor.sql: ERROR
+    com.amazonaws.util.EC2MetadataUtils: ERROR
